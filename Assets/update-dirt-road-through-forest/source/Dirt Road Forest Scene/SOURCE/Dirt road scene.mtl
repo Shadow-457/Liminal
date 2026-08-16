@@ -1,0 +1,283 @@
+# Blender 5.0.1 MTL File: 'Dirt road scene.blend'
+# www.blender.org
+
+newmtl Aerial_Grass
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/Aerial_Grass_Roughness.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/Aerial_Grass_Normal.jpg
+
+newmtl Background_Tree_Atlas
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/TREES/Background_Tree_Atlas_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/SKETCHFAB PROJECTS/TREE_PACK_FOREST/TEXTURES/TREES_LOW_POLY/Background_Tree_Atlas_Roughness.png
+map_d C:/Users/Mazen/Desktop/SKETCHFAB PROJECTS/TREE_PACK_FOREST/TEXTURES/TREES_LOW_POLY/Background_Tree_Atlas_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/SKETCHFAB PROJECTS/TREE_PACK_FOREST/TEXTURES/TREES_LOW_POLY/Background_Tree_Atlas_Normal.png
+
+newmtl Broken_Rocks
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Broken_Rocks_Roughness.jpg
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Broken_Rocks_Normal.jpg
+
+newmtl Cobblestone
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.164062 0.164062 0.164062
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Cobblestone_Roughness.jpg
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Cobblestone_Normal.jpg
+
+newmtl Dirt_Road
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Dirt_Road_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Dirt_Road_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Dirt_Road_Normal.png
+
+newmtl Dirt_Road_Bare
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Dirt_Road_Bare_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Dirt_Road_Bare_Roughness.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Dirt_Road_Bare_Normal.png
+
+newmtl Dirt_Road_Trails
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dirt_Road_Trails_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dirt_Road_Trails_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dirt_Road_Trails_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dirt_Road_Trails_Normal.png
+
+newmtl Fallen_Generic_Leaves
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Generic_Leaves_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Generic_Leaves_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Generic_Leaves_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Generic_Leaves_Normal.png
+
+newmtl Fallen_Maple_Leaves
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Maple_Leaves_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Maple_Leaves_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Maple_Leaves_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Fallen_Maple_Leaves_Normal.png
+
+newmtl Forest_Bush
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/BUSHES/Bush_Leaves_Diffuse.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/BUSHES/Bush_Leaves_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/BUSHES/Bush_Leaves_Normal.png
+
+newmtl Grass_Close
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/Grass_Close_Roughness.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN/Grass_Close_Normal.png
+
+newmtl Grass_Vegetation_Dry
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/Grass_Vegetation_Dry_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/Grass_Vegetation_Green_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/Grass_Vegetation_Opacity.png
+
+newmtl Grass_Vegetation_Green
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/Grass_Vegetation_Green_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/Grass_Vegetation_Green_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/Grass_Vegetation_Opacity.png
+
+newmtl Ground_Dirt
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/Ground_Dirt_Roughness.jpg
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/Ground_Dirt_Normal.jpg
+
+newmtl Metal_Fence
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/PROPS/Metal_Fence_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/PROPS/Metal_Fence_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/PROPS/Metal_Fence_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/PROPS/Metal_Fence_Normal.png
+
+newmtl Mud_Pile
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Wall_Mud_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Wall_Mud_Roughness.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/Wall_Mud_Normal.png
+
+newmtl Puddle_Streaks
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/PUDDLES/Puddle_Streaks_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/PUDDLES/Puddle_Streaks_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/PUDDLES/Puddle_Streaks_Opacity.png
+map_Bump -bm 0.100000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/PUDDLES/Puddle_Streaks_Normal.png
+
+newmtl Road_Edge_Gravel_Dusty
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 1
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dusty_Road_Edge_Gravel_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dusty_Road_Edge_Gravel_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dusty_Road_Edge_Gravel_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROAD/DECALS/Dusty_Road_Edge_Gravel_Normal.png
+
+newmtl Rock_Decal
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Rock_Decal_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Rock_Decal_Roughness.png
+map_d C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Rock_Decal_Opacity.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/DECAL/Rock_Decal_Normal.png
+
+newmtl Sloped_Rock
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Rock_Sloped_Roughness.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Rock_Sloped_Normal.png
+
+newmtl Tall_Cliff
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Tall_Cliff_Roughness.jpg
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/ROCKS&CLIFFS/Tall_Cliff_Normal.png
+
+newmtl Terrain_Far
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/TERRAIN_GRASS/Aerial_Grass_Roughness.png
+
+newmtl Trunk_Birch
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/TREES/Trunk_Birch_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/TREES/Trunk_Birch_Roughness.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/TREES/Trunk_Birch_Normal.png
+
+newmtl Trunk_Oak
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/TREES/Trunk_Oak_Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/TREES/Trunk_Oak_Roughness.png
+map_Bump -bm 1.000000 C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/VEGETATION/TREES/Trunk_Oak_Normal.png
+
+newmtl Wood_Fence
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/PROPS/Wooden Fence Diffuse.png
+map_Ns C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/PROPS/Wooden Fence Roughness.png
+
+newmtl Wood_Log
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Mazen/Desktop/OFFROAD_SCENE/TEXTURES/PROPS/Wood_Log_Diffuse.png
