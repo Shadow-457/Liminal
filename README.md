@@ -2,12 +2,10 @@
 
 A first person psychological horror game.
 
-You wake up in an abandoned hospital after a strange incident.
-
-Explore the hospital, find clues, discover what happened, and encounter something that should not be there.
-
+Suddenly you wake up in an abandoned hospital after a strange incident.
+You explore the hospital, find clues, discover what happened, and encounter something that should not be there.
 The deeper you go, the stranger everything becomes.
+Eventually you discover a portal leading to another realm, as you go through the portal you see the unseen.
 
-Eventually you discover a portal leading to another world.
 
 This is only a prototype for now
