@@ -7,5 +7,5 @@ You finally came to that hospital, you explore the hospital, find clues, discove
 The deeper you go, the stranger everything becomes.
 Eventually you discover a portal leading to another realm, as you go through the portal you see the unseen.
 
-
+# Note:
 This is only a prototype for now
