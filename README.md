@@ -10,4 +10,4 @@ The deeper you go, the stranger everything becomes.
 
 Eventually you discover a portal leading to another world.
 
-This is only a prototype, the full game will have multiple liminal stages, more story, puzzles, creatures, and a deeper mystery.
+This is only a prototypefor now
