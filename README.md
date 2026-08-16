@@ -1,4 +1,4 @@
-# no name currently hmm tinking will liminal be good or like idk
+# no name currently hmm thinking will liminal be good or like I don't really know
 
 A first person psychological horror game.
 
@@ -10,4 +10,4 @@ The deeper you go, the stranger everything becomes.
 
 Eventually you discover a portal leading to another world.
 
-This is only a prototypefor now
+This is only a prototype for now
