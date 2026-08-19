@@ -21,6 +21,32 @@ namespace StarterAssets
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
 
+		[Header("Sneak (Crouch)")]
+		[Tooltip("Move speed while sneaking (crouching), in m/s.")]
+		public float SneakSpeed = 2.0f;
+		[Tooltip("Key used to sneak / crouch.")]
+		public KeyCode sneakKey = KeyCode.LeftControl;
+		[Tooltip("If true, press the key once to toggle sneak on/off. If false, hold the key to sneak.")]
+		public bool sneakToggle = false;
+		[Tooltip("How much the camera and capsule lower while sneaking (metres).")]
+		public float CrouchHeightReduction = 0.4f;
+		[Tooltip("How fast the camera/capsule blends in and out of the sneak pose.")]
+		public float CrouchBlendSpeed = 10f;
+
+		[Header("Sprint Stamina (Cooldown)")]
+		[Tooltip("Total seconds you can sprint before the stamina bar empties and sprint goes on cooldown.")]
+		public float MaxStamina = 5f;
+		[Tooltip("Total cooldown in seconds: from a fully-drained bar until you can sprint again. " +
+		         "The stamina recovery rate is auto-calculated to match this.")]
+		public float SprintCooldown = 7f;
+		[Tooltip("Delay after sprinting stops before stamina starts regenerating.")]
+		public float StaminaRegenDelay = 1f;
+		[Tooltip("Minimum stamina (as a fraction of MaxStamina) needed before you can sprint again. " +
+		         "Higher = you must wait longer before sprinting again.")]
+		[Range(0f, 1f)] public float MinStaminaToSprint = 0.25f;
+		[Tooltip("Show the on-screen sprint stamina / cooldown bar.")]
+		public bool showStaminaBar = true;
+
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
@@ -63,6 +89,17 @@ namespace StarterAssets
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
+
+		// sneak / sprint-stamina state
+		private bool _sneakHeld;
+		private float _crouchBlend;
+		private float _stamina;
+		private float _staminaRegenDelayTimer;
+		private float _regenRate;
+		private bool _sprinting;
+		private float _controllerBaseHeight;
+		private float _controllerBaseCenterY;
+		private Vector3 _camTargetBasePos;
 
 	
 #if ENABLE_INPUT_SYSTEM
@@ -108,12 +145,39 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			// remember our base sizes/positions so sneak can lower them cleanly
+			_stamina = MaxStamina;
+			_controllerBaseHeight = _controller.height;
+			_controllerBaseCenterY = _controller.center.y;
+			if (CinemachineCameraTarget != null) _camTargetBasePos = CinemachineCameraTarget.transform.localPosition;
+
+			RecalculateRegenRate();
+
+			// build the on-screen sprint stamina / cooldown bar
+			if (showStaminaBar) SprintStaminaUI.Ensure(this);
+		}
+
+		// Derive the per-second recovery rate so that a fully-drained bar reaches the
+		// "can sprint again" threshold exactly after SprintCooldown seconds.
+		private void RecalculateRegenRate()
+		{
+			float regenWindow = Mathf.Max(0.01f, SprintCooldown - StaminaRegenDelay);
+			_regenRate = (MinStaminaToSprint * MaxStamina) / regenWindow;
+		}
+
+		// Keep the recovery rate in sync while editing in the Inspector.
+		private void OnValidate()
+		{
+			RecalculateRegenRate();
 		}
 
 		private void Update()
 		{
 			JumpAndGravity();
 			GroundedCheck();
+			UpdateSneak();
+			UpdateStamina();
 			Move();
 		}
 
@@ -153,8 +217,14 @@ namespace StarterAssets
 
 		private void Move()
 		{
-			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			// Sneaking overrides sprint; sprint needs stamina remaining (cooldown).
+			bool sneaking = _sneakHeld;
+			bool sprintRequested = _input.sprint && !sneaking && CanSprint();
+
+			float targetSpeed;
+			if (sneaking) targetSpeed = SneakSpeed;
+			else if (sprintRequested) targetSpeed = SprintSpeed;
+			else targetSpeed = MoveSpeed;
 
 			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
 
@@ -196,6 +266,83 @@ namespace StarterAssets
 
 			// move the player
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+		}
+
+		// ------------------------------------------------------------------ //
+		//  Sneak (crouch) + sprint stamina                                    //
+		// ------------------------------------------------------------------ //
+
+		/// <summary>Current sprint stamina (0..MaxStamina). Read by the HUD bar.</summary>
+		public float Stamina => _stamina;
+		/// <summary>Max sprint stamina.</summary>
+		public float StaminaMax => MaxStamina;
+		/// <summary>True while the player is actually sprinting this frame.</summary>
+		public bool IsSprinting => _sprinting;
+		/// <summary>True when there is enough stamina left to sprint.</summary>
+		public bool SprintReady => _stamina > MinStaminaToSprint * MaxStamina;
+		/// <summary>True while the player is currently sneaking (crouched).</summary>
+		public bool IsSneaking => _sneakHeld;
+
+		private void UpdateSneak()
+		{
+			// read the sneak key (hold to sneak, or toggle if sneakToggle is on)
+			if (sneakToggle)
+			{
+				if (Input.GetKeyDown(sneakKey)) _sneakHeld = !_sneakHeld;
+			}
+			else
+			{
+				_sneakHeld = Input.GetKey(sneakKey);
+			}
+
+			// blend smoothly between standing and crouching
+			float targetBlend = _sneakHeld ? 1f : 0f;
+			_crouchBlend = Mathf.MoveTowards(_crouchBlend, targetBlend, CrouchBlendSpeed * Time.deltaTime);
+
+			// shrink the capsule and lower the camera so it's a real crouch
+			_controller.height = Mathf.Lerp(_controllerBaseHeight, _controllerBaseHeight - CrouchHeightReduction, _crouchBlend);
+			Vector3 center = _controller.center;
+			center.y = Mathf.Lerp(_controllerBaseCenterY, _controllerBaseCenterY - CrouchHeightReduction * 0.5f, _crouchBlend);
+			_controller.center = center;
+
+			if (CinemachineCameraTarget != null)
+			{
+				Vector3 p = CinemachineCameraTarget.transform.localPosition;
+				p.y = Mathf.Lerp(_camTargetBasePos.y, _camTargetBasePos.y - CrouchHeightReduction, _crouchBlend);
+				CinemachineCameraTarget.transform.localPosition = p;
+			}
+		}
+
+		private void UpdateStamina()
+		{
+			bool moving = _input.move != Vector2.zero;
+			bool sprintingNow = _input.sprint && CanSprint() && moving && !_sneakHeld;
+
+			if (sprintingNow)
+			{
+				// drain stamina while sprinting
+				_stamina = Mathf.Max(0f, _stamina - Time.deltaTime);
+				_staminaRegenDelayTimer = StaminaRegenDelay;
+			}
+			else
+			{
+				// after the delay, stamina regenerates (the cooldown recovery)
+				if (_staminaRegenDelayTimer > 0f)
+				{
+					_staminaRegenDelayTimer -= Time.deltaTime;
+				}
+				else if (_stamina < MaxStamina)
+				{
+					_stamina = Mathf.Min(MaxStamina, _stamina + _regenRate * Time.deltaTime);
+				}
+			}
+
+			_sprinting = sprintingNow;
+		}
+
+		private bool CanSprint()
+		{
+			return _stamina > MinStaminaToSprint * MaxStamina;
 		}
 
 		private void JumpAndGravity()

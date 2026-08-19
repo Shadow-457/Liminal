@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5208be7923d6b9969e145c373691b4d, type: 3}
+  m_Name: hand
+  m_EditorClassIdentifier: Assembly-CSharp::ItemData
+  itemName: New Item
+  description: 
+  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  isStackable: 1
+  maxStackSize: 99
+  worldPrefab: {fileID: 7557255734556788063, guid: 4d1db93a9cc1387e5920cfacdad7f57d, type: 3}
